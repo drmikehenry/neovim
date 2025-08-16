@@ -77,7 +77,7 @@ pynvim (or older Neovim), where detection involved finding the first Python
 interpreter and checking if it could import pynvim, automatic detection would
 fail when another virtual environment is active.  Upgrading to the latest
 pynvim is the recommended solution to this; but if that's not an option, then
-you can set the variable |python3_host_prog| in `init.vim` to point to the full
+you can set the variable |g:python3_host_prog| in `init.vim` to point to the full
 path to the Python interpreter where `pynvim` is installed, e.g.: >vim
 
   " For Unix:
