@@ -72,13 +72,14 @@ To disable Python 3 support: >vim
 PYTHON VIRTUALENVS ~
 						*python-virtualenv*
 Using pynvim 0.6.0+ installed via uv or pipx, Neovim will automatically detect
-pynvim even if other Python virtual environments are activated.  For older
-pynvim (or older Neovim), where detection involved finding the first Python
-interpreter and checking if it could import pynvim, automatic detection would
-fail when another virtual environment is active.  Upgrading to the latest
-pynvim is the recommended solution to this; but if that's not an option, then
-you can set the variable |g:python3_host_prog| in `init.vim` to point to the full
-path to the Python interpreter where `pynvim` is installed, e.g.: >vim
+pynvim even if other Python virtual environments are activated (technical
+note: via the "pynvim-python" global python tool).  For older pynvim (or older
+Neovim), where detection involved finding the first Python interpreter and
+checking if it could import pynvim, automatic detection would fail when
+another virtual environment is active.  Upgrading to the latest pynvim is the
+recommended solution to this; but if that's not an option, then you can set
+the variable |g:python3_host_prog| in `init.vim` to point to the full path to
+the Python interpreter where `pynvim` is installed, e.g.: >vim
 
   " For Unix:
   let g:python3_host_prog = '/path/to/pynvim-venv/bin/python'
